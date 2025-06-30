@@ -6,6 +6,8 @@
 
 Ensure you have [Mise](https://mise.jdx.dev) and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
 
+Also, if you use kubie or other similar k8s context managers, do not use them for this example.
+
 ### Tool Installation
 
 Clone this repo to your local machine first.
