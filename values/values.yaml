@@ -1,0 +1,3 @@
+init:
+  git:
+    repository: https://github.com/natedotonline/helmfile.git

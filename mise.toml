@@ -1,0 +1,11 @@
+[settings]
+experimental = true
+
+[tools]
+go = "latest"
+"go:sigs.k8s.io/kind" = "latest"
+helm = "latest"
+helmfile = "latest"
+k9s = "latest"
+kubectl = "latest"
+kubie = "latest"

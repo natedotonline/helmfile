@@ -1,0 +1,20 @@
+environments:
+  kind1:
+    kubeContext: kind-kind1
+  kind2:
+    kubeContext: kind-kind2
+
+---
+repositories:
+ - name: cfpb
+   url: ghcr.io/cfpb
+   oci: true
+
+releases:
+- name: static-site
+  namespace: nginx
+  chart: cfpb/static-site
+  version: 0.1.1
+  values:
+    - ./values/values.yaml
+    - ./values/values.{{ .Environment.Name }}.yaml
