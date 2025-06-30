@@ -36,9 +36,9 @@ helmfile --environment kind1 sync
 helmfile --environment kind2 sync
 ```
 
-### Testing
+## Testing
 
-#### 'kind1' Cluster
+### 'kind1' Cluster
 
 ```shell
 kubectl config use-context kind-kind1
@@ -51,7 +51,7 @@ Browse to [http://localhost:8081/](http://localhost:8081/) and you should see a 
 
 Terminate the port forwarding via `Ctrl+C` in your shell.
 
-#### 'kind2' Cluster
+### 'kind2' Cluster
 
 ```shell
 kubectl config use-context kind-kind2
@@ -63,3 +63,10 @@ kubectl --namespace nginx port-forward $POD_NAME 8082:$CONTAINER_PORT
 Browse to [http://localhost:8082/](http://localhost:8082/) and you should see a page saying `This is kind2.`. This values comes from [kind2/index.html](kind1/index.html), which is configured in [values/values.kind2.yaml](values/values.kind2.yaml).
 
 Terminate the port forwarding via `Ctrl+C` in your shell.
+
+## Cleanup
+
+```shell
+kind delete cluster -n kind1
+kind delete cluster -n kind2
+```
