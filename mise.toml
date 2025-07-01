@@ -5,12 +5,9 @@ HELM_PLUGINS = ".helm-plugins"
 experimental = true
 
 [tools]
-go = "latest"
-"go:sigs.k8s.io/kind" = "latest"
+"kind" = "latest"
 helm = "latest"
-k9s = "latest"
 kubectl = "latest"
-kubie = "latest"
 
 [tools.helmfile]
 version = "latest"
