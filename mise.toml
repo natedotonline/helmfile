@@ -5,8 +5,8 @@ HELM_PLUGINS = ".helm-plugins"
 experimental = true
 
 [tools]
-"kind" = "latest"
 helm = "latest"
+kind = "latest"
 kubectl = "latest"
 
 [tools.helmfile]
