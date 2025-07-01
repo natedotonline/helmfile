@@ -1,3 +1,6 @@
+[env]
+HELM_PLUGINS = ".helm-plugins"
+
 [settings]
 experimental = true
 
@@ -5,7 +8,10 @@ experimental = true
 go = "latest"
 "go:sigs.k8s.io/kind" = "latest"
 helm = "latest"
-helmfile = "latest"
 k9s = "latest"
 kubectl = "latest"
 kubie = "latest"
+
+[tools.helmfile]
+version = "latest"
+postinstall = "mise x -- helmfile init --force"
